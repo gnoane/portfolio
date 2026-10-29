@@ -1,12 +1,12 @@
-# Portfolio projects
+# Projets du portfolio
 
-This folder contains project pages for work that is either already completed or being prepared. Before publishing results, add only code, data and conclusions you have verified.
+Ce dossier contient les pages de projets, terminés ou en préparation. Avant de publier des résultats, n'ajoute que du code, des données et des conclusions que tu as vérifiés.
 
-## Suggested roadmap
+## Feuille de route suggérée
 
-1. **Helmholtz resonator** — document the CPGE TIPE with the measurement method, Python analysis and a careful theory/experiment comparison.
-2. **Graph algorithms** — implement BFS and DFS in C, with tests and complexity notes.
-3. **Automata and grammars** — add a small, well-explained OCaml or C implementation.
-4. **Scientific computing mini-project** — take a public dataset, formulate a question, analyse it with Python, and explain limitations.
+1. **Résonateur de Helmholtz** — documenter le TIPE de CPGE avec la méthode de mesure, l'analyse Python et une comparaison prudente entre théorie et expérience.
+2. **Algorithmes de graphes** — implémenter BFS et DFS en C, avec des tests et des notes de complexité.
+3. **Automates et grammaires** — ajouter une petite implémentation bien expliquée en OCaml ou en C.
+4. **Mini-projet de calcul scientifique** — prendre un jeu de données public, formuler une question, l'analyser avec Python et expliquer les limites.
 
-For each project, aim for a README, runnable code, sample input/output, tests and one or two figures where useful.
+Pour chaque projet, viser un README, du code exécutable, des exemples d'entrées/sorties, des tests et une ou deux figures si utile.
