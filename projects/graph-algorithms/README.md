@@ -36,5 +36,5 @@ Ce dépôt a vocation à rassembler de petites implémentations et explications 
 
 - C
 - OCaml
-- SQL
 - Ada
+- SQL
