@@ -27,20 +27,7 @@ L'objectif est de comparer des mesures expérimentales de résonance à un modè
 
 ## Modèle
 
-Un modèle simplifié du résonateur de Helmholtz donne la fréquence de résonance approchée
-
-\[
-f_0 = \frac{c}{2\pi}\sqrt{\frac{S}{V L_{\mathrm{eff}}}},
-\]
-
-où :
-
-- \(c\) est la célérité du son,
-- \(S\) est l'aire de la section du col,
-- \(V\) est le volume de la cavité,
-- \(L_{\mathrm{eff}}\) est la longueur effective du col, corrections de bout comprises.
-
-Ce modèle suppose une cavité compacte, de petites oscillations et une approximation adéquate de l'air du col par une masse ponctuelle. Les mesures réelles peuvent différer à cause des pertes, de la géométrie, du couplage avec le haut-parleur et le microphone, et de l'incertitude sur la longueur effective.
+Un modèle simplifié du résonateur de Helmholtz donne la fréquence de résonance approchée. Celui-ci suppose une cavité compacte, de petites oscillations et une approximation adéquate de l'air du col par une masse ponctuelle. Les mesures réelles peuvent différer à cause des pertes, de la géométrie, du couplage avec le haut-parleur et le microphone, et de l'incertitude sur la longueur effective.
 
 ## Outils d'analyse
 
@@ -59,16 +46,3 @@ helmholtz-resonator/
 ├── figures/       # Graphiques exportés
 └── README.md
 ```
-
-## Liste de contrôle pour la reproductibilité
-
-- [ ] Ajouter les fichiers CSV de mesures brutes/anonymisées et décrire leurs colonnes.
-- [ ] Ajouter le script d'analyse final ou le notebook.
-- [ ] Inclure des graphiques avec unités, légendes et conditions de mesure.
-- [ ] Expliquer comment la fréquence de résonance et la bande passante sont extraites.
-- [ ] Indiquer les incertitudes et distinguer les résultats mesurés des estimations théoriques.
-- [ ] Ajouter les références utilisées dans le projet.
-
-## Remarque
-
-Ce dépôt est un modèle de présentation. N'ajoute que des données, graphiques et conclusions que tu as le droit de publier, et vérifie chaque valeur numérique annoncée par rapport à l'analyse finale.
