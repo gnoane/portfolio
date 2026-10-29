@@ -3,84 +3,236 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Noane — étudiant ingénieur à l'ENSEEIHT, passionné de sciences du numérique, de physique, de modélisation et d'algorithmique.">
-  <title>Noane — Portfolio d'ingénieur</title>
+  <meta name="description" content="E-portfolio de Gauthier Noane — étudiant ingénieur à l'ENSEEIHT (Sciences du Numérique).">
+  <title>Gauthier Noane — E-portfolio</title>
   <style>
-    :root { color-scheme: dark; --bg:#0b1020; --panel:#121a2d; --text:#edf2ff; --muted:#aab6d3; --accent:#7dd3fc; --line:#26324c; }
+    :root { color-scheme: dark; --bg:#0b1020; --panel:#121a2d; --text:#edf2ff; --muted:#aab6d3; --accent:#7dd3fc; --line:#26324c; --todo:#f5c26b; }
     * { box-sizing:border-box; }
-    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:radial-gradient(ellipse at top right,#182848 0,transparent 42%),var(--bg); color:var(--text); line-height:1.65; }
+    html[lang="fr"] .en, html[lang="en"] .fr { display:none !important; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; background:radial-gradient(ellipse at top right,#182848 0,transparent 42%),var(--bg); color:var(--text); line-height:1.65; }
     .wrap { width:min(980px,92%); margin:auto; }
-    header { padding:78px 0 52px; }
-    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.16em; font-size:.8rem; font-weight:700; }
-    h1 { font-size:clamp(2.6rem,7vw,5rem); line-height:1.05; margin:.5rem 0 1rem; letter-spacing:-.05em; }
-    h2 { letter-spacing:-.03em; font-size:1.7rem; }
-    .lead { max-width:680px; color:var(--muted); font-size:1.15rem; }
-    .links { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .button { padding:10px 16px; border:1px solid #42617d; border-radius:10px; color:var(--text); background:#14233a; }
-    section { padding:24px 0; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; }
+    a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+    .top { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; padding:22px 0 8px; }
+    .brand { font-weight:700; letter-spacing:-.02em; }
+    .lang button { background:none; border:1px solid #344661; color:var(--muted); padding:4px 12px; border-radius:999px; cursor:pointer; font:inherit; font-size:.85rem; }
+    .lang button[aria-pressed="true"] { color:var(--text); border-color:var(--accent); }
+    nav[role="tablist"] { display:flex; flex-wrap:wrap; gap:8px; padding:10px 0 18px; border-bottom:1px solid var(--line); }
+    nav button { font:inherit; font-size:.92rem; color:var(--muted); background:transparent; border:1px solid var(--line); padding:8px 14px; border-radius:10px; cursor:pointer; }
+    nav button:hover { color:var(--text); border-color:#547ca1; }
+    nav button[aria-selected="true"] { color:var(--text); background:#14233a; border-color:#42617d; }
+    button:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+    main { padding:34px 0 20px; min-height:60vh; }
+    .panel[hidden] { display:none; }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.16em; font-size:.78rem; font-weight:700; }
+    h1 { font-size:clamp(2.2rem,6vw,4rem); line-height:1.08; margin:.4rem 0 1rem; letter-spacing:-.045em; }
+    h2 { letter-spacing:-.03em; font-size:1.65rem; margin:0 0 .4rem; }
+    h3 { margin:.2rem 0 .4rem; font-size:1.15rem; }
+    .lead { max-width:680px; color:var(--muted); font-size:1.12rem; }
+    .muted, .card p { color:var(--muted); }
+    .hero { display:flex; flex-wrap:wrap; gap:32px; align-items:center; }
+    .avatar { width:150px; height:150px; border-radius:50%; border:2px solid #42617d; background:#14233a; display:grid; place-items:center; font-size:3rem; color:var(--accent); overflow:hidden; flex:none; }
+    .avatar img { width:100%; height:100%; object-fit:cover; }
+    .links { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+    .button { padding:10px 16px; border:1px solid #42617d; border-radius:10px; color:var(--text); background:#14233a; display:inline-block; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin-top:18px; }
     .card { background:rgba(18,26,45,.88); border:1px solid var(--line); border-radius:16px; padding:22px; }
-    .card p, .muted { color:var(--muted); }
     .tag { display:inline-block; border:1px solid #344661; color:#c7d8f5; padding:3px 9px; border-radius:999px; font-size:.82rem; margin:4px 4px 0 0; }
-    footer { padding:42px 0 55px; color:var(--muted); border-top:1px solid var(--line); margin-top:28px; }
+    .todo { border:1px dashed var(--todo); color:var(--todo); border-radius:10px; padding:8px 12px; font-size:.9rem; margin:10px 0 0; }
+    ul.clean { padding-left:1.1rem; margin:.3rem 0; color:var(--muted); }
+    table { width:100%; border-collapse:collapse; margin-top:14px; font-size:.95rem; }
+    th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+    th { color:var(--accent); font-size:.8rem; text-transform:uppercase; letter-spacing:.1em; }
+    td:last-child { white-space:nowrap; color:var(--todo); }
+    footer { padding:30px 0 50px; color:var(--muted); border-top:1px solid var(--line); font-size:.9rem; }
     @media (prefers-reduced-motion:no-preference) { .card { transition:transform .18s ease,border-color .18s ease; } .card:hover { transform:translateY(-3px); border-color:#547ca1; } }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <header>
-      <div class="eyebrow">Ingénierie · Physique · Logiciel</div>
-      <h1>Bonjour, je suis Noane<span style="color:var(--accent)">.</span></h1>
-      <p class="lead">Étudiant ingénieur à l'ENSEEIHT en Sciences du Numérique (SN), issu d'une CPGE MPI. J'aime relier modèles physiques, mesures expérimentales et algorithmes.</p>
-      <div class="links">
-        <a class="button" href="https://github.com/gnoane">Profil GitHub ↗</a>
-        <a class="button" href="#projects">Découvrir les projets ↓</a>
-      </div>
-    </header>
+<div class="wrap">
+  <div class="top">
+    <span class="brand">Gauthier Noane</span>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button type="button" data-set="fr" aria-pressed="true">FR</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
 
-    <section>
-      <h2>À propos</h2>
-      <p class="muted">Je m'intéresse à l'acoustique et aux oscillations, à l'électromagnétisme, à la conception d'algorithmes, à la théorie des graphes, aux automates et au calcul scientifique. Je cherche à construire des projets compréhensibles, reproductibles et fondés sur des preuves.</p>
+  <nav role="tablist" aria-label="Sections">
+    <button role="tab" id="t-welcome" aria-controls="welcome" aria-selected="true"><span class="fr">Bienvenue</span><span class="en">Welcome</span></button>
+    <button role="tab" id="t-engineering" aria-controls="engineering" aria-selected="false"><span class="fr">Cursus ingénieur</span><span class="en">Engineering course</span></button>
+    <button role="tab" id="t-mobility" aria-controls="mobility" aria-selected="false"><span class="fr">Mobilité internationale</span><span class="en">International mobility</span></button>
+    <button role="tab" id="t-civic" aria-controls="civic" aria-selected="false"><span class="fr">Développement durable &amp; engagement</span><span class="en">Sustainability &amp; civic engagement</span></button>
+    <button role="tab" id="t-sport" aria-controls="sport" aria-selected="false"><span class="fr">Sport &amp; activités</span><span class="en">Sport &amp; other activities</span></button>
+    <button role="tab" id="t-career" aria-controls="career" aria-selected="false"><span class="fr">Projet professionnel</span><span class="en">Career development</span></button>
+  </nav>
+
+  <main>
+    <!-- WELCOME -->
+    <section class="panel" id="welcome" role="tabpanel" aria-labelledby="t-welcome">
+      <div class="hero">
+        <div class="avatar" aria-hidden="false">
+          <!-- Dépose ta photo sous le nom photo.jpg à côté de index.html -->
+          <img src="photo.jpg" alt="Portrait de Gauthier Noane" onerror="var p=this.parentNode;p.textContent='GN';p.setAttribute('role','img');p.setAttribute('aria-label','GN')">
+        </div>
+        <div style="flex:1;min-width:260px">
+          <div class="eyebrow"><span class="fr">Ingénierie · Physique · Logiciel</span><span class="en">Engineering · Physics · Software</span></div>
+          <h1>Gauthier Noane<span style="color:var(--accent)">.</span></h1>
+          <p class="lead fr">Étudiant ingénieur à l'ENSEEIHT (Toulouse INP), en Sciences du Numérique, issu d'une CPGE MPI. J'aime relier modèles physiques, mesures expérimentales et algorithmes.</p>
+          <p class="lead en">Engineering student at ENSEEIHT (Toulouse INP) in Digital Sciences, after a CPGE MPI preparatory class. I enjoy connecting physical models, experimental measurements and algorithms.</p>
+          <div class="links">
+            <a class="button" href="https://github.com/gnoane">GitHub ↗</a>
+            <a class="button" href="#career" data-go="career"><span class="fr">Mon projet professionnel →</span><span class="en">My career project →</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card"><h3><span class="fr">Ce qui m'intéresse</span><span class="en">What drives me</span></h3>
+          <p class="fr">Acoustique et oscillations, électromagnétisme, algorithmes, graphes, automates et calcul scientifique.</p>
+          <p class="en">Acoustics and oscillations, electromagnetism, algorithms, graphs, automata and scientific computing.</p></div>
+        <div class="card"><h3><span class="fr">Ma démarche</span><span class="en">My approach</span></h3>
+          <p class="fr">Des projets compréhensibles, reproductibles et appuyés sur des preuves.</p>
+          <p class="en">Projects that are understandable, reproducible and grounded in evidence.</p></div>
+        <div class="card"><h3><span class="fr">Et ensuite</span><span class="en">Next</span></h3>
+          <p class="fr">Un VIE en 3<sup>e</sup> année, pour allier profondeur technique et expérience internationale.</p>
+          <p class="en">A VIE (international corporate volunteering) in my 3<sup>rd</sup> year, combining technical depth with international experience.</p></div>
+      </div>
+      <p class="todo"><span class="fr">À compléter : une phrase de proposition de valeur (ce qui te distingue) pour remplacer ou compléter le texte ci-dessus.</span><span class="en">To complete: one sentence stating your unique value proposition.</span></p>
     </section>
 
-    <section id="projects">
-      <h2>Projets sélectionnés</h2>
+    <!-- ENGINEERING -->
+    <section class="panel" id="engineering" role="tabpanel" aria-labelledby="t-engineering" hidden>
+      <h2><span class="fr">Cursus ingénieur</span><span class="en">Engineering course</span></h2>
+      <p class="muted fr">Projets et productions. Chaque projet suit la même trame : contexte, rôle, méthode, résultats, enseignements.</p>
+      <p class="muted en">Projects and productions. Each project follows the same structure: context, role, method, results, lessons.</p>
       <div class="grid">
         <article class="card">
-          <div class="eyebrow">Physique · Traitement du signal</div>
-          <h3>Résonateur de Helmholtz</h3>
-          <p>Étude expérimentale de la résonance acoustique, comparant un modèle d'oscillateur simplifié à des réponses en fréquence mesurées.</p>
-          <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">SciPy</span>
-          <p><a href="projects/helmholtz-resonator/README.md">Lire les notes du projet →</a></p>
+          <div class="eyebrow"><span class="fr">Physique · Traitement du signal</span><span class="en">Physics · Signal processing</span></div>
+          <h3><span class="fr">Résonateur de Helmholtz (TIPE)</span><span class="en">Helmholtz resonator (TIPE)</span></h3>
+          <p class="fr"><b>Contexte :</b> étude expérimentale de la résonance de cavités d'air, haut-parleur, microphone et oscilloscope.<br><b>Méthode :</b> modèle masse-ressort du col et de la cavité, comparé aux courbes de résonance mesurées avec Python.</p>
+          <p class="en"><b>Context:</b> experimental study of air-cavity resonance with a loudspeaker, microphone and oscilloscope.<br><b>Method:</b> mass-spring model of neck and cavity, compared with measured resonance curves using Python.</p>
+          <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Matplotlib</span>
+          <p class="todo"><span class="fr">À compléter : ton rôle précis, 1–2 résultats chiffrés, ce que tu as appris.</span><span class="en">To complete: your exact role, 1–2 quantified results, lessons learned.</span></p>
+          <p><a href="projects/helmholtz-resonator/README.md"><span class="fr">Notes du projet →</span><span class="en">Project notes →</span></a></p>
         </article>
         <article class="card">
-          <div class="eyebrow">Algorithmique · Programmation</div>
-          <h3>Graphes, automates et grammaires</h3>
-          <p>Une collection en expansion d'implémentations documentées, d'exemples, de tests et de notes de complexité.</p>
-          <span class="tag">C</span><span class="tag">OCaml</span><span class="tag">Algorithmique</span>
-          <p><a href="projects/graph-algorithms/README.md">Lire les notes du projet →</a></p>
+          <div class="eyebrow"><span class="fr">Algorithmique · Programmation</span><span class="en">Algorithms · Programming</span></div>
+          <h3><span class="fr">Graphes, automates et grammaires</span><span class="en">Graphs, automata &amp; grammars</span></h3>
+          <p class="fr">Implémentations documentées en C et OCaml : parcours de graphes, automates, grammaires, avec tests et notes de complexité.</p>
+          <p class="en">Documented implementations in C and OCaml: graph traversal, automata, grammars, with tests and complexity notes.</p>
+          <span class="tag">C</span><span class="tag">OCaml</span>
+          <p class="todo"><span class="fr">À compléter : ajoute au moins une implémentation réelle avant de la présenter comme terminée.</span><span class="en">To complete: add at least one real implementation before presenting it as finished.</span></p>
+          <p><a href="projects/graph-algorithms/README.md"><span class="fr">Notes du projet →</span><span class="en">Project notes →</span></a></p>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Ada · ENSEEIHT</div>
+          <h3><span class="fr">Jeu du devin (mini-projet)</span><span class="en">Number-guessing game (mini-project)</span></h3>
+          <p class="fr">Mini-projet individuel en Ada : recherche d'un nombre par dichotomie.</p>
+          <p class="en">Individual Ada mini-project: finding a number by binary search.</p>
+          <span class="tag">Ada</span>
+          <p class="todo"><span class="fr">Optionnel : à publier seulement si le règlement du cours l'autorise.</span><span class="en">Optional: publish only if the course rules allow it.</span></p>
         </article>
       </div>
+      <h3 style="margin-top:28px"><span class="fr">Boîte à outils</span><span class="en">Toolkit</span></h3>
+      <span class="tag">C</span><span class="tag">OCaml</span><span class="tag">Ada</span><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Matplotlib</span><span class="tag">Git</span><span class="tag">LaTeX</span>
     </section>
 
-    <section>
-      <h2>Boîte à outils</h2>
-      <div class="card">
-        <span class="tag">C</span><span class="tag">OCaml</span><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">SciPy</span><span class="tag">Git</span><span class="tag">LaTeX</span>
-        <p>Les compétences et outils listés ici reflètent mon expérience actuelle ; je continue d'apprendre grâce aux cours et aux projets.</p>
+    <!-- MOBILITY -->
+    <section class="panel" id="mobility" role="tabpanel" aria-labelledby="t-mobility" hidden>
+      <h2><span class="fr">Mobilité internationale</span><span class="en">International mobility</span></h2>
+      <p class="muted fr">La mobilité de 17 semaines est à valider en S9. Mon projet principal : un <b>VIE</b> (Volontariat International en Entreprise) en 3<sup>e</sup> année.</p>
+      <p class="muted en">The 17-week mobility is validated in S9. My main project: a <b>VIE</b> (international corporate volunteering programme) in my 3<sup>rd</sup> year.</p>
+      <div class="grid">
+        <div class="card"><div class="eyebrow">Projet 1 · Project 1</div><h3>VIE — 3<sup>e</sup> année / 3<sup>rd</sup> year</h3>
+          <p class="todo"><span class="fr">À compléter : pays/secteurs visés, pourquoi, lien avec tes modèles de carrière.</span><span class="en">To complete: target countries/sectors, why, link to your role models.</span></p></div>
+        <div class="card"><div class="eyebrow">Projet 2 · Project 2</div><h3>…</h3>
+          <p class="todo"><span class="fr">À compléter.</span><span class="en">To complete.</span></p></div>
+        <div class="card"><div class="eyebrow">Projet 3 · Project 3</div><h3>…</h3>
+          <p class="todo"><span class="fr">À compléter.</span><span class="en">To complete.</span></p></div>
+      </div>
+      <p class="muted fr" style="margin-top:14px">Le cours demande 3 projets de mobilité cohérents avec 3 profils de modèles (voir « Projet professionnel »).</p>
+      <p class="muted en" style="margin-top:14px">The course asks for 3 mobility projects aligned with 3 role-model profiles (see “Career development”).</p>
+    </section>
+
+    <!-- CIVIC -->
+    <section class="panel" id="civic" role="tabpanel" aria-labelledby="t-civic" hidden>
+      <h2><span class="fr">Développement durable &amp; engagement citoyen</span><span class="en">Sustainability &amp; civic engagement</span></h2>
+      <div class="grid">
+        <div class="card"><h3><span class="fr">Délégué</span><span class="en">Class representative</span></h3>
+          <p class="fr">Rôle de délégué : représenter mes camarades auprès de l'équipe pédagogique.</p>
+          <p class="en">Class representative role: speaking for my peers with the teaching staff.</p>
+          <p class="todo"><span class="fr">À compléter : délégué de quelle promo/année, 2–3 actions concrètes, ce que ça t'a apporté. Le diplôme demande 40 h d'engagement citoyen en S9.</span><span class="en">To complete: which class/year, 2–3 concrete actions, what you learned. The degree requires 40 h of civic engagement in S9.</span></p></div>
+        <div class="card"><h3><span class="fr">Développement durable</span><span class="en">Sustainability</span></h3>
+          <p class="todo"><span class="fr">À compléter (cours Engagement RSE, Fresque du Climat, économie circulaire…) si pertinent.</span><span class="en">To complete (CSR course, Climate Fresk, circular economy…) if relevant.</span></p></div>
       </div>
     </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p class="muted">Intéressé par l'ingénierie, le calcul scientifique ou les projets collaboratifs ?</p>
-      <p><a href="https://github.com/gnoane">GitHub</a> · <a href="https://www.linkedin.com/">LinkedIn (ajouter ton profil)</a></p>
+    <!-- SPORT -->
+    <section class="panel" id="sport" role="tabpanel" aria-labelledby="t-sport" hidden>
+      <h2><span class="fr">Sport &amp; autres activités</span><span class="en">Sport &amp; other activities</span></h2>
+      <div class="grid">
+        <div class="card"><h3>🥋 <span class="fr">Jiu-jitsu brésilien (JJB)</span><span class="en">Brazilian jiu-jitsu (BJJ)</span></h3></div>
+        <div class="card"><h3>🧗 <span class="fr">Escalade</span><span class="en">Climbing</span></h3></div>
+        <div class="card"><h3>♟️ <span class="fr">Échecs</span><span class="en">Chess</span></h3></div>
+      </div>
+      <p class="todo"><span class="fr">À compléter : depuis quand tu pratiques, ton niveau si tu veux le dire, et ce que ces activités t'apportent.</span><span class="en">To complete: how long you've practised, your level if you wish, and what these activities bring you.</span></p>
     </section>
 
-    <footer>© <span id="year"></span> Noane · Réalisé en HTML et CSS.</footer>
+    <!-- CAREER -->
+    <section class="panel" id="career" role="tabpanel" aria-labelledby="t-career" hidden>
+      <h2><span class="fr">Projet professionnel</span><span class="en">Career development</span></h2>
+      <p class="muted fr">Livrables du module Marketing 4 Careers, à déposer sur Moodle.</p>
+      <p class="muted en">Deliverables for the Marketing 4 Careers module, to be uploaded to Moodle.</p>
+      <table>
+        <thead><tr><th><span class="fr">Livrable</span><span class="en">Deliverable</span></th><th><span class="fr">Détail</span><span class="en">Details</span></th><th><span class="fr">Statut</span><span class="en">Status</span></th></tr></thead>
+        <tbody>
+          <tr><td>CV (EN)</td><td><span class="fr">CV en anglais — lien à ajouter</span><span class="en">CV in English — link to add</span></td><td><span class="fr">À faire</span><span class="en">To do</span></td></tr>
+          <tr><td>CV (FR)</td><td><span class="fr">CV en français — lien à ajouter</span><span class="en">CV in French — link to add</span></td><td><span class="fr">À faire</span><span class="en">To do</span></td></tr>
+          <tr><td>LinkedIn</td><td><span class="fr">Profil en anglais et en français (optionnel, recommandé)</span><span class="en">Profile in English and French (optional, recommended)</span></td><td><span class="fr">À faire</span><span class="en">To do</span></td></tr>
+          <tr><td><span class="fr">Vidéo pitch</span><span class="en">Pitch video</span></td><td><span class="fr">2–3 min en anglais : présent, passé (très bref), futur</span><span class="en">2–3 min in English: present, (very brief) past, future</span></td><td><span class="fr">À faire</span><span class="en">To do</span></td></tr>
+          <tr><td><span class="fr">3 modèles</span><span class="en">3 role models</span></td><td><span class="fr">3 profils analysés (My Job Glasses, alumni…)</span><span class="en">3 profiles analysed (My Job Glasses, alumni…)</span></td><td><span class="fr">À faire</span><span class="en">To do</span></td></tr>
+          <tr><td><span class="fr">3 mobilités</span><span class="en">3 mobility projects</span></td><td><span class="fr">Alignées avec les 3 modèles (voir l'onglet Mobilité)</span><span class="en">Aligned with the 3 role models (see Mobility tab)</span></td><td><span class="fr">1/3 amorcé</span><span class="en">1/3 started</span></td></tr>
+        </tbody>
+      </table>
+    </section>
   </main>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+  <footer><span class="fr">© <span class="y"></span> Gauthier Noane · Réalisé en HTML et CSS · Hébergé sur GitHub Pages</span><span class="en">© <span class="y"></span> Gauthier Noane · Built with HTML and CSS · Hosted on GitHub Pages</span></footer>
+</div>
+
+<script>
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function show(id) {
+    var ok = false;
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('aria-controls') === id; ok = ok || on;
+      t.setAttribute('aria-selected', on);
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (!ok) show('welcome');
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { var id = t.getAttribute('aria-controls'); show(id); history.replaceState(null, '', '#' + id); });
+    t.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { var n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); n.click(); }
+    });
+  });
+  document.querySelectorAll('[data-go]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); show(a.dataset.go); history.replaceState(null, '', '#' + a.dataset.go); window.scrollTo(0, 0); });
+  });
+  show((location.hash || '#welcome').slice(1));
+
+  function setLang(l) {
+    document.documentElement.lang = l;
+    document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === l); });
+    try { localStorage.setItem('lang', l); } catch (e) {}
+  }
+  document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.set); }); });
+  var saved = null; try { saved = localStorage.getItem('lang'); } catch (e) {}
+  if (saved === 'fr' || saved === 'en') setLang(saved);
+  document.querySelectorAll('.y').forEach(function (s) { s.textContent = new Date().getFullYear(); });
+})();
+</script>
 </body>
 </html>
