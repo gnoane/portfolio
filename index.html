@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="E-portfolio de Gauthier Noane — étudiant ingénieur à l'ENSEEIHT (Sciences du Numérique).">
+  <meta name="description" content="E-portfolio de Gauthier Noane — étudiant ingénieur à l'ENSEEIHT (Sciences du Numérique), en recherche d'un stage en gestion de données.">
   <title>Gauthier Noane — E-portfolio</title>
   <style>
     :root { color-scheme: dark; --bg:#0b1020; --panel:#121a2d; --text:#edf2ff; --muted:#aab6d3; --accent:#7dd3fc; --line:#26324c; --todo:#f5c26b; }
@@ -67,128 +67,120 @@
   </nav>
 
   <main>
-    <!-- WELCOME -->
     <section class="panel" id="welcome" role="tabpanel" aria-labelledby="t-welcome">
       <div class="hero">
-        <div class="avatar" aria-hidden="false">
-          <!-- Dépose ta photo sous le nom photo.jpg à côté de index.html -->
-          <img src="photo.jpg" alt="Portrait de Gauthier Noane" onerror="var p=this.parentNode;p.textContent='GN';p.setAttribute('role','img');p.setAttribute('aria-label','GN')">
+        <div class="avatar">
+          <img src="photo.jpg" alt="Portrait de Gauthier Noane" onerror="var p=this.parentNode;p.textContent='GN'">
         </div>
         <div style="flex:1;min-width:260px">
-          <div class="eyebrow"><span class="fr">Ingénierie · Physique · Logiciel</span><span class="en">Engineering · Physics · Software</span></div>
+          <div class="eyebrow"><span class="fr">Ingénierie · Données · Physique</span><span class="en">Engineering · Data · Physics</span></div>
           <h1>Gauthier Noane<span style="color:var(--accent)">.</span></h1>
-          <p class="lead fr">Étudiant ingénieur à l'ENSEEIHT (Toulouse INP), en Sciences du Numérique, issu d'une CPGE MPI. J'aime relier modèles physiques, mesures expérimentales et algorithmes.</p>
-          <p class="lead en">Engineering student at ENSEEIHT (Toulouse INP) in Digital Sciences, after a CPGE MPI preparatory class. I enjoy connecting physical models, experimental measurements and algorithms.</p>
+          <p class="lead fr">Étudiant ingénieur à l'ENSEEIHT (Toulouse INP), en Sciences du Numérique, issu d'une CPGE MP2I puis MPI. Je recherche un stage en gestion de données.</p>
+          <p class="lead en">Engineering student at ENSEEIHT (Toulouse INP) in Digital Sciences, after CPGE MP2I and MPI preparatory classes. I am looking for an internship in data management.</p>
           <div class="links">
             <a class="button" href="https://github.com/gnoane">GitHub ↗</a>
+            <a class="button" href="cv/CV_Gauthier_Noane_FR.pdf"><span class="fr">CV (FR) ↓</span><span class="en">Resume (FR) ↓</span></a>
+            <a class="button" href="cv/CV_Gauthier_Noane_EN.pdf"><span class="fr">CV (EN) ↓</span><span class="en">Resume (EN) ↓</span></a>
             <a class="button" href="#career" data-go="career"><span class="fr">Mon projet professionnel →</span><span class="en">My career project →</span></a>
           </div>
         </div>
       </div>
+      <div class="card" style="margin-top:22px"><h3><span class="fr">Ma proposition de valeur</span><span class="en">My value proposition</span></h3>
+        <p class="fr">Scolarisé en Éthiopie, au Bénin, au Liban, en Italie et aux Émirats arabes unis, je me suis adapté à des environnements très différents. J'aime relier modèles, mesures et données avec rigueur, et je veux mettre cette ouverture internationale au service de projets concrets.</p>
+        <p class="en">Schooled in Ethiopia, Benin, Lebanon, Italy and the United Arab Emirates, I have learned to adapt to very different environments. I like connecting models, measurements and data rigorously, and I want to bring this international outlook to concrete projects.</p></div>
       <div class="grid">
         <div class="card"><h3><span class="fr">Ce qui m'intéresse</span><span class="en">What drives me</span></h3>
-          <p class="fr">Acoustique et oscillations, électromagnétisme, algorithmes, graphes, automates et calcul scientifique.</p>
-          <p class="en">Acoustics and oscillations, electromagnetism, algorithms, graphs, automata and scientific computing.</p></div>
+          <p class="fr">Gestion de données, algorithmique, acoustique et oscillations, modélisation.</p>
+          <p class="en">Data management, algorithms, acoustics and oscillations, modelling.</p></div>
         <div class="card"><h3><span class="fr">Ma démarche</span><span class="en">My approach</span></h3>
           <p class="fr">Des projets compréhensibles, reproductibles et appuyés sur des preuves.</p>
           <p class="en">Projects that are understandable, reproducible and grounded in evidence.</p></div>
         <div class="card"><h3><span class="fr">Et ensuite</span><span class="en">Next</span></h3>
-          <p class="fr">Un VIE en 3<sup>e</sup> année, pour allier profondeur technique et expérience internationale.</p>
-          <p class="en">A VIE (international corporate volunteering) in my 3<sup>rd</sup> year, combining technical depth with international experience.</p></div>
+          <p class="fr">Un stage en gestion de données, puis un VIE en Scandinavie en 3<sup>e</sup> année.</p>
+          <p class="en">An internship in data management, then a VIE in Scandinavia in my 3<sup>rd</sup> year.</p></div>
       </div>
-      <p class="todo"><span class="fr">À compléter : une phrase de proposition de valeur (ce qui te distingue) pour remplacer ou compléter le texte ci-dessus.</span><span class="en">To complete: one sentence stating your unique value proposition.</span></p>
     </section>
 
-    <!-- ENGINEERING -->
     <section class="panel" id="engineering" role="tabpanel" aria-labelledby="t-engineering" hidden>
       <h2><span class="fr">Cursus ingénieur</span><span class="en">Engineering course</span></h2>
-      <p class="muted fr">Projets et productions. Chaque projet suit la même trame : contexte, rôle, méthode, résultats, enseignements.</p>
-      <p class="muted en">Projects and productions. Each project follows the same structure: context, role, method, results, lessons.</p>
+      <p class="muted fr">ENSEEIHT, Sciences du Numérique (depuis 2026), après une CPGE MP2I (2024-2025) puis MPI (2025-2026) au lycée Descartes de Tours.</p>
+      <p class="muted en">ENSEEIHT, Digital Sciences (since 2026), after CPGE MP2I (2024-2025) and MPI (2025-2026) at Lycée Descartes, Tours.</p>
       <div class="grid">
         <article class="card">
-          <div class="eyebrow"><span class="fr">Physique · Traitement du signal</span><span class="en">Physics · Signal processing</span></div>
+          <div class="eyebrow"><span class="fr">Physique · Mesures</span><span class="en">Physics · Measurements</span></div>
           <h3><span class="fr">Résonateur de Helmholtz (TIPE)</span><span class="en">Helmholtz resonator (TIPE)</span></h3>
-          <p class="fr"><b>Contexte :</b> étude expérimentale de la résonance de cavités d'air, haut-parleur, microphone et oscilloscope.<br><b>Méthode :</b> modèle masse-ressort du col et de la cavité, comparé aux courbes de résonance mesurées avec Python.</p>
-          <p class="en"><b>Context:</b> experimental study of air-cavity resonance with a loudspeaker, microphone and oscilloscope.<br><b>Method:</b> mass-spring model of neck and cavity, compared with measured resonance curves using Python.</p>
-          <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Matplotlib</span>
-          <p class="todo"><span class="fr">À compléter : ton rôle précis, 1–2 résultats chiffrés, ce que tu as appris.</span><span class="en">To complete: your exact role, 1–2 quantified results, lessons learned.</span></p>
+          <p class="fr"><b>Contexte :</b> étude expérimentale de la résonance acoustique de cavités d'air.<br><b>Méthode :</b> mesures avec haut-parleur, microphone et oscilloscope, comparées à un modèle physique simplifié. Travail mené seul, du protocole à l'analyse.</p>
+          <p class="en"><b>Context:</b> experimental study of the acoustic resonance of air cavities.<br><b>Method:</b> measurements with a loudspeaker, microphone and oscilloscope, compared with a simplified physical model. Carried out independently, from protocol to analysis.</p>
+          <span class="tag">Acoustique</span><span class="tag">Modélisation</span><span class="tag">Expérimental</span>
+          <p class="todo"><span class="fr">À compléter : 1–2 résultats chiffrés et ce que tu as appris.</span><span class="en">To complete: 1–2 quantified results and lessons learned.</span></p>
           <p><a href="projects/helmholtz-resonator/README.md"><span class="fr">Notes du projet →</span><span class="en">Project notes →</span></a></p>
-        </article>
-        <article class="card">
-          <div class="eyebrow"><span class="fr">Algorithmique · Programmation</span><span class="en">Algorithms · Programming</span></div>
-          <h3><span class="fr">Graphes, automates et grammaires</span><span class="en">Graphs, automata &amp; grammars</span></h3>
-          <p class="fr">Implémentations documentées en C et OCaml : parcours de graphes, automates, grammaires, avec tests et notes de complexité.</p>
-          <p class="en">Documented implementations in C and OCaml: graph traversal, automata, grammars, with tests and complexity notes.</p>
-          <span class="tag">C</span><span class="tag">OCaml</span>
-          <p class="todo"><span class="fr">À compléter : ajoute au moins une implémentation réelle avant de la présenter comme terminée.</span><span class="en">To complete: add at least one real implementation before presenting it as finished.</span></p>
-          <p><a href="projects/graph-algorithms/README.md"><span class="fr">Notes du projet →</span><span class="en">Project notes →</span></a></p>
         </article>
         <article class="card">
           <div class="eyebrow">Ada · ENSEEIHT</div>
           <h3><span class="fr">Jeu du devin (mini-projet)</span><span class="en">Number-guessing game (mini-project)</span></h3>
-          <p class="fr">Mini-projet individuel en Ada : recherche d'un nombre par dichotomie.</p>
-          <p class="en">Individual Ada mini-project: finding a number by binary search.</p>
-          <span class="tag">Ada</span>
-          <p class="todo"><span class="fr">Optionnel : à publier seulement si le règlement du cours l'autorise.</span><span class="en">Optional: publish only if the course rules allow it.</span></p>
+          <p class="fr"><b>Contexte :</b> mini-projet individuel de programmation.<br><b>Méthode :</b> recherche d'un nombre par dichotomie.</p>
+          <p class="en"><b>Context:</b> individual programming mini-project.<br><b>Method:</b> finding a number by binary search.</p>
+          <span class="tag">Ada</span><span class="tag">Dichotomie</span>
         </article>
       </div>
-      <h3 style="margin-top:28px"><span class="fr">Boîte à outils</span><span class="en">Toolkit</span></h3>
-      <span class="tag">C</span><span class="tag">OCaml</span><span class="tag">Ada</span><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Matplotlib</span><span class="tag">Git</span><span class="tag">LaTeX</span>
+      <h3 style="margin-top:28px"><span class="fr">Compétences</span><span class="en">Skills</span></h3>
+      <span class="tag">C</span><span class="tag">OCaml</span><span class="tag">Ada</span><span class="tag">SQL</span><span class="tag">Matlab</span><span class="tag">LaTeX</span>
+      <p class="muted fr" style="margin-top:12px">Langues : français (langue maternelle), anglais (B2), espagnol (A2).</p>
+      <p class="muted en" style="margin-top:12px">Languages: French (native), English (B2), Spanish (A2).</p>
     </section>
 
-    <!-- MOBILITY -->
     <section class="panel" id="mobility" role="tabpanel" aria-labelledby="t-mobility" hidden>
       <h2><span class="fr">Mobilité internationale</span><span class="en">International mobility</span></h2>
-      <p class="muted fr">La mobilité de 17 semaines est à valider en S9. Mon projet principal : un <b>VIE</b> (Volontariat International en Entreprise) en 3<sup>e</sup> année.</p>
-      <p class="muted en">The 17-week mobility is validated in S9. My main project: a <b>VIE</b> (international corporate volunteering programme) in my 3<sup>rd</sup> year.</p>
+      <p class="muted fr">Scolarisé dans cinq pays, je souhaite poursuivre à l'international. La mobilité de 17 semaines est à valider en S9.</p>
+      <p class="muted en">Having been schooled in five countries, I want to continue internationally. The 17-week mobility is validated in S9.</p>
       <div class="grid">
-        <div class="card"><div class="eyebrow">Projet 1 · Project 1</div><h3>VIE — 3<sup>e</sup> année / 3<sup>rd</sup> year</h3>
-          <p class="todo"><span class="fr">À compléter : pays/secteurs visés, pourquoi, lien avec tes modèles de carrière.</span><span class="en">To complete: target countries/sectors, why, link to your role models.</span></p></div>
+        <div class="card"><div class="eyebrow">Projet 1 · Project 1</div><h3>VIE — Scandinavie</h3>
+          <p class="fr">Volontariat International en Entreprise en 3<sup>e</sup> année, dans la gestion de données, en Scandinavie.</p>
+          <p class="en">International corporate volunteering (VIE) in my 3<sup>rd</sup> year, in data management, in Scandinavia.</p>
+          <p class="todo"><span class="fr">À compléter : pays précis, entreprises visées, pourquoi.</span><span class="en">To complete: specific countries, target companies, why.</span></p></div>
         <div class="card"><div class="eyebrow">Projet 2 · Project 2</div><h3>…</h3>
           <p class="todo"><span class="fr">À compléter.</span><span class="en">To complete.</span></p></div>
         <div class="card"><div class="eyebrow">Projet 3 · Project 3</div><h3>…</h3>
           <p class="todo"><span class="fr">À compléter.</span><span class="en">To complete.</span></p></div>
       </div>
-      <p class="muted fr" style="margin-top:14px">Le cours demande 3 projets de mobilité cohérents avec 3 profils de modèles (voir « Projet professionnel »).</p>
-      <p class="muted en" style="margin-top:14px">The course asks for 3 mobility projects aligned with 3 role-model profiles (see “Career development”).</p>
     </section>
 
-    <!-- CIVIC -->
     <section class="panel" id="civic" role="tabpanel" aria-labelledby="t-civic" hidden>
       <h2><span class="fr">Développement durable &amp; engagement citoyen</span><span class="en">Sustainability &amp; civic engagement</span></h2>
       <div class="grid">
-        <div class="card"><h3><span class="fr">Délégué</span><span class="en">Class representative</span></h3>
-          <p class="fr">Rôle de délégué : représenter mes camarades auprès de l'équipe pédagogique.</p>
-          <p class="en">Class representative role: speaking for my peers with the teaching staff.</p>
-          <p class="todo"><span class="fr">À compléter : délégué de quelle promo/année, 2–3 actions concrètes, ce que ça t'a apporté. Le diplôme demande 40 h d'engagement citoyen en S9.</span><span class="en">To complete: which class/year, 2–3 concrete actions, what you learned. The degree requires 40 h of civic engagement in S9.</span></p></div>
-        <div class="card"><h3><span class="fr">Développement durable</span><span class="en">Sustainability</span></h3>
-          <p class="todo"><span class="fr">À compléter (cours Engagement RSE, Fresque du Climat, économie circulaire…) si pertinent.</span><span class="en">To complete (CSR course, Climate Fresk, circular economy…) if relevant.</span></p></div>
+        <div class="card"><h3><span class="fr">Délégué de groupe de TD</span><span class="en">Tutorial-group representative</span></h3>
+          <p class="fr">Porte-parole de mon groupe de TD auprès de l'équipe pédagogique, à l'ENSEEIHT.</p>
+          <p class="en">Spokesperson for my tutorial group with the teaching staff, at ENSEEIHT.</p>
+          <p class="todo"><span class="fr">À compléter : 1–2 actions concrètes.</span><span class="en">To complete: 1–2 concrete actions.</span></p></div>
+        <div class="card"><h3><span class="fr">Vie étudiante</span><span class="en">Student life</span></h3>
+          <p class="fr">Candidat à la présidence d'une liste BDE de la filière Sciences du Numérique.</p>
+          <p class="en">Candidate for president of a student union list in the Digital Sciences programme.</p></div>
       </div>
     </section>
 
-    <!-- SPORT -->
     <section class="panel" id="sport" role="tabpanel" aria-labelledby="t-sport" hidden>
       <h2><span class="fr">Sport &amp; autres activités</span><span class="en">Sport &amp; other activities</span></h2>
       <div class="grid">
-        <div class="card"><h3>🥋 <span class="fr">Jiu-jitsu brésilien (JJB)</span><span class="en">Brazilian jiu-jitsu (BJJ)</span></h3></div>
-        <div class="card"><h3>🧗 <span class="fr">Escalade</span><span class="en">Climbing</span></h3></div>
-        <div class="card"><h3>♟️ <span class="fr">Échecs</span><span class="en">Chess</span></h3></div>
+        <div class="card"><h3>🧗 <span class="fr">Escalade</span><span class="en">Climbing</span></h3>
+          <p class="fr">Niveau 6b, environ 2 ans de pratique.</p><p class="en">Grade 6b, about 2 years of practice.</p></div>
+        <div class="card"><h3>♟️ <span class="fr">Échecs</span><span class="en">Chess</span></h3>
+          <p class="fr">4 ans de pratique, sans classement officiel.</p><p class="en">4 years of practice, no official rating.</p></div>
+        <div class="card"><h3>🥋 <span class="fr">Jiu-jitsu brésilien (JJB)</span><span class="en">Brazilian jiu-jitsu (BJJ)</span></h3>
+          <p class="fr">Débutant, commencé en 2026.</p><p class="en">Beginner, started in 2026.</p></div>
       </div>
-      <p class="todo"><span class="fr">À compléter : depuis quand tu pratiques, ton niveau si tu veux le dire, et ce que ces activités t'apportent.</span><span class="en">To complete: how long you've practised, your level if you wish, and what these activities bring you.</span></p>
     </section>
 
-    <!-- CAREER -->
     <section class="panel" id="career" role="tabpanel" aria-labelledby="t-career" hidden>
       <h2><span class="fr">Projet professionnel</span><span class="en">Career development</span></h2>
-      <p class="muted fr">Livrables du module Marketing 4 Careers, à déposer sur Moodle.</p>
-      <p class="muted en">Deliverables for the Marketing 4 Careers module, to be uploaded to Moodle.</p>
+      <p class="muted fr"><b>Objectif :</b> un stage en gestion de données, puis un VIE en Scandinavie.</p>
+      <p class="muted en"><b>Goal:</b> an internship in data management, then a VIE in Scandinavia.</p>
       <table>
         <thead><tr><th><span class="fr">Livrable</span><span class="en">Deliverable</span></th><th><span class="fr">Détail</span><span class="en">Details</span></th><th><span class="fr">Statut</span><span class="en">Status</span></th></tr></thead>
         <tbody>
-          <tr><td>CV (EN)</td><td><span class="fr">CV en anglais — lien à ajouter</span><span class="en">CV in English — link to add</span></td><td><span class="fr">À faire</span><span class="en">To do</span></td></tr>
-          <tr><td>CV (FR)</td><td><span class="fr">CV en français — lien à ajouter</span><span class="en">CV in French — link to add</span></td><td><span class="fr">À faire</span><span class="en">To do</span></td></tr>
+          <tr><td>CV (EN)</td><td><a href="cv/CV_Gauthier_Noane_EN.pdf"><span class="fr">Télécharger le CV en anglais</span><span class="en">Download the English resume</span></a></td><td><span class="fr">Disponible</span><span class="en">Available</span></td></tr>
+          <tr><td>CV (FR)</td><td><a href="cv/CV_Gauthier_Noane_FR.pdf"><span class="fr">Télécharger le CV en français</span><span class="en">Download the French resume</span></a></td><td><span class="fr">Disponible</span><span class="en">Available</span></td></tr>
           <tr><td>LinkedIn</td><td><span class="fr">Profil en anglais et en français (optionnel, recommandé)</span><span class="en">Profile in English and French (optional, recommended)</span></td><td><span class="fr">À faire</span><span class="en">To do</span></td></tr>
-          <tr><td><span class="fr">Vidéo pitch</span><span class="en">Pitch video</span></td><td><span class="fr">2–3 min en anglais : présent, passé (très bref), futur</span><span class="en">2–3 min in English: present, (very brief) past, future</span></td><td><span class="fr">À faire</span><span class="en">To do</span></td></tr>
+          <tr><td><span class="fr">Vidéo pitch</span><span class="en">Pitch video</span></td><td><span class="fr">2–3 min en anglais : présent, passé (très bref), futur</span><span class="en">2–3 min in English: present, (very brief) past, future</span></td><td><span class="fr">À filmer</span><span class="en">To film</span></td></tr>
           <tr><td><span class="fr">3 modèles</span><span class="en">3 role models</span></td><td><span class="fr">3 profils analysés (My Job Glasses, alumni…)</span><span class="en">3 profiles analysed (My Job Glasses, alumni…)</span></td><td><span class="fr">À faire</span><span class="en">To do</span></td></tr>
           <tr><td><span class="fr">3 mobilités</span><span class="en">3 mobility projects</span></td><td><span class="fr">Alignées avec les 3 modèles (voir l'onglet Mobilité)</span><span class="en">Aligned with the 3 role models (see Mobility tab)</span></td><td><span class="fr">1/3 amorcé</span><span class="en">1/3 started</span></td></tr>
         </tbody>
