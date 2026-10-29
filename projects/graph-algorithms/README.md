@@ -1,40 +1,40 @@
-# Graph Algorithms, Automata & Grammars
+# Algorithmes de graphes, automates et grammaires
 
-**Status:** starter project  
-**Topics:** algorithms, discrete mathematics, C, OCaml
+**Statut :** projet de départ  
+**Thèmes :** algorithmique, mathématiques discrètes, C, OCaml
 
-This repository is intended to collect small implementations and explanations related to algorithmic topics studied in CPGE MPI and beyond.
+Ce dépôt a vocation à rassembler de petites implémentations et explications liées aux thèmes d'algorithmique étudiés en CPGE MPI et au-delà.
 
-## Planned modules
+## Modules prévus
 
-### Graphs
-- Graph representations (adjacency lists and matrices)
-- Breadth-first search (BFS) and depth-first search (DFS)
-- Shortest paths
-- Complexity analysis and test cases
+### Graphes
+- Représentations de graphes (listes et matrices d'adjacence)
+- Parcours en largeur (BFS) et en profondeur (DFS)
+- Plus courts chemins
+- Analyse de complexité et jeux de tests
 
-### Automata
-- Finite automaton representation
-- Word recognition
-- Determinisation and minimisation, where implemented
-- Example inputs and outputs
+### Automates
+- Représentation d'un automate fini
+- Reconnaissance de mots
+- Déterminisation et minimisation, lorsqu'elles sont implémentées
+- Exemples d'entrées et de sorties
 
-### Grammars
-- Small grammar examples
-- Parsing or derivation exercises
-- Clear explanation of assumptions and limitations
+### Grammaires
+- Petits exemples de grammaires
+- Exercices d'analyse syntaxique ou de dérivation
+- Explication claire des hypothèses et des limites
 
-## Principles
+## Principes
 
-- Keep each algorithm focused and readable.
-- Document the input format and expected output.
-- Include tests for normal cases and edge cases.
-- State time and space complexity when useful.
-- Separate coursework solutions from original implementations and respect academic rules.
+- Garder chaque algorithme ciblé et lisible.
+- Documenter le format d'entrée et la sortie attendue.
+- Inclure des tests pour les cas normaux et les cas limites.
+- Indiquer les complexités en temps et en espace si utile.
+- Séparer les corrigés d'exercices de cours des implémentations originales, dans le respect des règles académiques.
 
-## Languages
+## Langages
 
 - C
 - OCaml
 
-> The repository is a scaffold: add implementations only once they are written, tested and ready to share.
+> Ce dépôt est une ébauche : n'ajoute des implémentations qu'une fois écrites, testées et prêtes à être partagées.
