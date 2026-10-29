@@ -36,5 +36,5 @@ Ce dépôt a vocation à rassembler de petites implémentations et explications 
 
 - C
 - OCaml
-
-> Ce dépôt est une ébauche : n'ajoute des implémentations qu'une fois écrites, testées et prêtes à être partagées.
+- SQL
+- Ada
