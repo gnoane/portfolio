@@ -41,6 +41,7 @@
     ul.clean { padding-left:1.1rem; margin:.3rem 0; color:var(--muted); }
     table { width:100%; border-collapse:collapse; margin-top:14px; font-size:.95rem; }
     th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+    td.st { white-space:nowrap; color:#8fd694; }
     th { color:var(--accent); font-size:.8rem; text-transform:uppercase; letter-spacing:.1em; }
     footer { padding:30px 0 50px; color:var(--muted); border-top:1px solid var(--line); font-size:.9rem; }
     @media (prefers-reduced-motion:no-preference) { .card { transition:transform .18s ease,border-color .18s ease; } .card:hover { transform:translateY(-3px); border-color:#547ca1; } }
@@ -184,17 +185,17 @@
       <p class="muted fr"><b>Objectif :</b> un stage en gestion de données, puis un VIE en Scandinavie.</p>
       <p class="muted en"><b>Goal:</b> an internship in data management, then a VIE in Scandinavia.</p>
       <table>
-        <thead><tr><th><span class="fr">Livrable</span><span class="en">Deliverable</span></th><th><span class="fr">Détail</span><span class="en">Details</span></th></tr></thead>
+        <thead><tr><th><span class="fr">Livrable</span><span class="en">Deliverable</span></th><th><span class="fr">Détail</span><span class="en">Details</span></th><th><span class="fr">Statut</span><span class="en">Status</span></th></tr></thead>
         <tbody>
-          <tr><td>CV (EN)</td><td><a href="cv/CV_Gauthier_Noane_EN.pdf"><span class="fr">Télécharger le CV en anglais</span><span class="en">Download the English resume</span></a></td>
-            </tr>
-          <tr><td>CV (FR)</td><td><a href="cv/CV_Gauthier_Noane_FR.pdf"><span class="fr">Télécharger le CV en français</span><span class="en">Download the French resume</span></a></td></tr>
-          <tr><td><span class="fr">Vidéo pitch</span><span class="en">Pitch video</span></td><td><span class="fr">2–3 min en anglais : présent, passé (très bref), futur</span><span class="en">2–3 min in English: present, (very brief) past, future</span></td></tr>
+          <tr><td>CV (EN)</td><td><a href="cv/CV_Gauthier_Noane_EN.pdf"><span class="fr">Télécharger le CV en anglais</span><span class="en">Download the English resume</span></a></td><td class="st"><span class="fr">Disponible</span><span class="en">Available</span></td></tr>
+          <tr><td>CV (FR)</td><td><a href="cv/CV_Gauthier_Noane_FR.pdf"><span class="fr">Télécharger le CV en français</span><span class="en">Download the French resume</span></a></td><td class="st"><span class="fr">Disponible</span><span class="en">Available</span></td></tr>
+          <tr><td><span class="fr">Vidéo pitch</span><span class="en">Pitch video</span></td><td><span class="fr">2–3 min en anglais : présent, passé (très bref), futur</span><span class="en">2–3 min in English: present, (very brief) past, future</span></td><td class="st"><span class="fr">Disponible</span><span class="en">Available</span></td></tr>
         </tbody>
       </table>
       <div class="card" style="margin-top:22px">
   <h3><span class="fr">Ma vidéo de présentation</span><span class="en">My pitch video</span></h3>
-  <video controls preload="metadata" style="width:100%;border-radius:12px;margin-top:10px" src="video/pitch.mp4"></video>
+  <video controls preload="metadata" style="width:100%;border-radius:12px;margin-top:10px" src="video/pitch.mp4">Votre navigateur ne lit pas cette vidéo.</video>
+  <p style="margin:10px 0 0"><a href="video/pitch.mp4" download><span class="fr">Télécharger la vidéo (MP4)</span><span class="en">Download the video (MP4)</span></a></p>
 </div>
     </section>
   </main>
